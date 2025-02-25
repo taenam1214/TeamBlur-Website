@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+/* Contact Section - Main Container */
+.contact-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  box-sizing: border-box;
+  margin-top: 100px;
+  z-index: 1;
+  
+}
+
+/* Scoped Circle Container */
+.contact-circle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Ensure circles only appear inside the Contact page */
+.contact-circle-wrapper {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Background Layer behind the circles but above the page background */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7367FF;
+  z-index: 0;
+}
+
+/* Ensure Content Appears Above Circles */
+.content, .contact-details, .copyright-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Circle Styling */
+.contact-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: contact-move 20s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+/* Main content container */
+.content {
+  width: 1248px;
+  max-width: 1248px;
+  height: 446px;
+  border-radius: 32px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 48px;
+  margin-top: 132px; /* Space between content and contact details */
+}
+
+/* Heading styles */
+h1 {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 88px;
+  margin-top: 48px;
+}
+
+.blurr-text {
+  font-family: "DynaPuff", cursive;
+}
+
+.app-update-text {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  margin-top: -24px;
+  margin-bottom: 48px;
+}
+
+/* Contact details section */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1248px;
+  max-width: 1440px;
+  padding: 24px 48px;
+  border-radius: 24px;
+  margin: 100px;
+}
+
+/* Left section: Contact Us heading */
+.left-section h2 {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+/* Right section: Contact info and social icons */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-info p {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 46px;
+  margin-top: 24px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright Section */
+.copyright-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Line separator */
+.copyright-line {
+  width: 1248px;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 48px;
+}
+
+/* Copyright text */
+.copyright-text {
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+/* Unified Media Query for Tablets and Phones */
+@media (max-width: 1300px) {
+  /* Adjust content size */
+  .content {
+    padding: 32px;
+    border-radius: 24px;
+    margin-top: 100px;
+    width: calc(100% - 64px);
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  .app-update-text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 36px;
+  }
+
+  .contact-details {
+    width: calc(100% - 64px); /* Adjust width with margins */
+    max-width: 1000px;        /* Optional limit for large screens */
+    margin: 0 auto;           /* Center horizontally */
+    padding: 24px 16px;
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center content horizontally */
+    text-align: center;       /* Align text */
+    gap: 20px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Copyright */
+  .copyright-line {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .contact-info{
+    text-align: left;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+  .content{
+    width: calc(100% - 32px);
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .app-update-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  /* Contact details */
+  .left-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .copyright-text {
+    font-size: 14px;
+  }
+}

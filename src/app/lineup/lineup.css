@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.lineup-container {
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff; /* Maintains white background */
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title Styling */
+  .lineup-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #18181B;
+  }
+  
+  /* Matching Navbar Logo Styling */
+  .logo {
+    font-family: "DynaPuff", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #7367FF;
+  }
+  
+  .logo-blur {
+    filter: blur(3px);
+    color: #7367FF;
+    font-size: 40px;
+
+  }
+  
+  /* Description */
+  .lineup-description {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 20px;
+  }
+  
+  /* Email Input & Button */
+  .lineup-email-container {
+    width: 480px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #7367FF;
+    border-radius: 20px;
+    background: #FFF;
+    padding: 5px 5px;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  .lineup-email-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans";
+    color: #7367FF;
+    padding: 12px 12px;
+    background: transparent;
+    border-radius: 20px;
+  }
+  
+  .lineup-email-input::placeholder {
+    color: #999;
+  }
+  
+  /* Subscribe Button */
+  .lineup-email-submit {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans";
+    background-color: #DDD;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: not-allowed;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .lineup-email-submit.active {
+    background-color: #7367FF;
+    cursor: pointer;
+  }
+  
+  .lineup-email-submit.active:hover {
+    background-color: #5a54e5;
+  }
+  
+  /* Success Message */
+  .success-message {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7367FF;
+    margin-top: 10px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .lineup-email-container {
+      flex-direction: row;
+      width: 100%;
+      padding: 5px 10px;
+    }
+  
+    .lineup-email-submit {
+      width: auto;
+    }
+  }
+  

@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.dashboard-container {
+  position: relative;
+  height: 100vh; /* Full screen */
+  background-color: #7367FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  overflow: hidden;
+  z-index: 1; /* Ensure content is above the circles */
+}
+
+/* Blurr Logo in the Top Left */
+.blurr-logo {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  font-family: "DynaPuff", cursive;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* Blur effect only for the last 'r' in Blurr */
+.blurred-r {
+  display: inline-block;
+  filter: blur(4px);
+}
+
+/* Enable scrolling beyond the dashboard */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.fade-in-out {
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Final step styling */
+.final-content {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.final-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: -64px;
+}
+
+.blurr-text-1 {
+  font-family: "DynaPuff", cursive;
+  color: white;
+
+}
+
+/* Subtitle */
+.final-content h2 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 72px;
+}
+
+/* Email input and button */
+.email-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.email-input {
+  width: 400px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  border-radius: 300px;
+  background-color: white;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.waitlist-button {
+  width: 135px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 8px;
+}
+
+.waitlist-button:hover {
+  background: #444;
+}
+
+/* Input Field Styling */
+.email-input.invalid {
+  border: 4px solid #FF4D4D;
+  background-color: #FFECEC;
+}
+
+.error-message {
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Disabled Button Styling */
+.waitlist-button:disabled {
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Animated Circles - Background Effect */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -1; /* Send circles to the back */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  width: 560px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 32px;
+  text-align: center;
+  color: #212427;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #212427;
+  margin-top: 19px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Modal Email Text */
+.modal-email {
+  font-size: 18px;
+  font-weight: 400;
+  color: #212427;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.modal-email strong {
+  font-weight: 600;
+}
+
+/* Modal Subtext */
+.modal-subtext {
+  font-size: 18px;
+  font-weight: 400;
+  color: #212427;
+  line-height: 24px;
+}
+
+/* Modal Button */
+.modal-button {
+  width: 113px;
+  height: 48px;
+  padding: 0 32px;
+  background-color: #7367FF;
+  border-radius: 100px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.modal-button:hover {
+  background-color: #5747d6;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Larger Circle Sizes */
+.circle-0 { width: 770px; height: 770px; animation: move1 30s infinite alternate ease-in-out; left: 5vw; top: 5vh; }
+.circle-1 { width: 700px; height: 700px; animation: move2 28s infinite alternate ease-in-out; left: 80vw; top: 10vh; }
+.circle-2 { width: 830px; height: 830px; animation: move3 32s infinite alternate ease-in-out; left: 20vw; top: 60vh; }
+.circle-3 { width: 750px; height: 750px; animation: move4 26s infinite alternate ease-in-out; left: 50vw; top: 5vh; }
+.circle-4 { width: 730px; height: 730px; animation: move5 34s infinite alternate ease-in-out; left: 10vw; top: 30vh; }
+.circle-5 { width: 800px; height: 800px; animation: move6 36s infinite alternate ease-in-out; left: 70vw; top: 70vh; }
+.circle-6 { width: 720px; height: 720px; animation: move7 29s infinite alternate ease-in-out; left: 30vw; top: 80vh; }
+.circle-7 { width: 850px; height: 850px; animation: move8 40s infinite alternate ease-in-out; left: 85vw; top: 50vh; }
+.circle-8 { width: 760px; height: 760px; animation: move9 33s infinite alternate ease-in-out; left: 45vw; top: 20vh; }
+.circle-9 { width: 810px; height: 810px; animation: move10 35s infinite alternate ease-in-out; left: 15vw; top: 75vh; }
+.circle-10 { width: 870px; height: 870px; animation: move11 38s infinite alternate ease-in-out; left: 60vw; top: 5vh; }
+.circle-11 { width: 830px; height: 830px; animation: move12 33s infinite alternate ease-in-out; left: 20vw; top: 50vh; }
+.circle-12 { width: 800px; height: 800px; animation: move13 35s infinite alternate ease-in-out; left: 75vw; top: 10vh; }
+.circle-13 { width: 820px; height: 820px; animation: move14 29s infinite alternate ease-in-out; left: 40vw; top: 60vh; }
+.circle-14 { width: 860px; height: 860px; animation: move15 42s infinite alternate ease-in-out; left: 10vw; top: 90vh; }
+
+/* More Randomized Movements - Covers Entire Screen */
+@keyframes move1 {
+  0% { transform: translate(-10vw, -5vh); }
+  25% { transform: translate(70vw, 10vh); }
+  50% { transform: translate(20vw, 50vh); }
+  75% { transform: translate(-10vw, 80vh); }
+  100% { transform: translate(5vw, 10vh); }
+}
+
+@keyframes move2 {
+  0% { transform: translate(10vw, 40vh); }
+  25% { transform: translate(-60vw, 20vh); }
+  50% { transform: translate(40vw, 80vh); }
+  75% { transform: translate(-5vw, 90vh); }
+  100% { transform: translate(10vw, 40vh); }
+}
+
+@keyframes move3 {
+  0% { transform: translate(-50vw, 5vh); }
+  25% { transform: translate(5vw, 80vh); }
+  50% { transform: translate(30vw, 30vh); }
+  75% { transform: translate(-75vw, 20vh); }
+  100% { transform: translate(50vw, 5vh); }
+}
+
+@keyframes move4 {
+  0% { transform: translate(40vw, 70vh); }
+  25% { transform: translate(-80vw, 10vh); }
+  50% { transform: translate(10vw, 40vh); }
+  75% { transform: translate(-50vw, 60vh); }
+  100% { transform: translate(30vw, 80vh); }
+}
+
+@keyframes move5 {
+  0% { transform: translate(-75vw, 60vh); }
+  25% { transform: translate(40vw, -10vh); }
+  50% { transform: translate(20vw, 80vh); }
+  75% { transform: translate(-70vw, 40vh); }
+  100% { transform: translate(75vw, 60vh); }
+}
+
+@keyframes move6 {
+  0% { transform: translate(50vw, -10vh); }
+  25% { transform: translate(-40vw, 70vh); }
+  50% { transform: translate(80vw, 10vh); }
+  75% { transform: translate(-50vw, 90vh); }
+  100% { transform: translate(50vw, 5vh); }
+}
+
+@keyframes move7 {
+  0% { transform: translate(-5vw, 80vh); }
+  25% { transform: translate(80vw, -15vh); }
+  50% { transform: translate(-85vw, 50vh); }
+  75% { transform: translate(20vw, 75vh); }
+  100% { transform: translate(-5vw, 60vh); }
+}
+
+@keyframes move8 {
+  0% { transform: translate(80vw, 5vh); }
+  25% { transform: translate(-20vw, 90vh); }
+  50% { transform: translate(50vw, 30vh); }
+  75% { transform: translate(-90vw, 60vh); }
+  100% { transform: translate(70vw, 10vh); }
+}
+
+@keyframes move9 {
+  0% { transform: translate(30vw, 50vh); }
+  25% { transform: translate(-80vw, 5vh); }
+  50% { transform: translate(75vw, 40vh); }
+  75% { transform: translate(-10vw, 70vh); }
+  100% { transform: translate(30vw, 30vh); }
+}
+
+@keyframes move10 {
+  0% { transform: translate(50vw, 70vh); }
+  25% { transform: translate(-15vw, 30vh); }
+  50% { transform: translate(80vw, 50vh); }
+  75% { transform: translate(-90vw, 15vh); }
+  100% { transform: translate(40vw, 80vh); }
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+    font-size: 32px;
+  }
+
+  .fade-in-out,.final-content{
+    margin-top: -128px;
+  }
+
+  .email-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .email-input {
+    width: 256px;
+    height: 48px;
+
+  }
+  
+  .waitlist-button {
+    width: 300px;
+    margin-left: 0;
+    height: 48px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .blurr-logo {
+    font-size: 24px;
+    top: 10px;
+    left: 20px;
+  }
+
+  .final-content h1,
+  .final-content h2 {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+  
+  /* Adjust circles for smaller screens */
+  .circle {
+    width: 300px !important;
+    height: 300px !important;
+    filter: blur(80px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  .blurr-logo {
+    font-size: 20px;
+    top: 10px;
+    left: 20px;
+  }
+
+  .final-content h1{
+  margin-bottom: -32px;
+  }
+
+  .final-content h2 {
+    font-size: 36px;
+  }
+
+  .circle {
+    width: 250px !important;
+    height: 250px !important;
+    filter: blur(60px);
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.faq-container {
+    width: 90%;
+    max-width: 1248px;
+    margin: auto;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.faq-title {
+    font-family: Plus Jakarta Sans;
+    margin-top: 120px;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 96px;
+    text-align: center;
+    color: #212427;
+}
+
+.faq-list {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+}
+
+.faq-item.open {
+    transform: scale(1.02);
+    animation: fadeInExpand 0.3s ease-in-out;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    padding: 32px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease-in-out;
+    position: relative;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    color: #212427;
+}
+
+.faq-item.open {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 25px 0px rgba(115, 103, 255, 0.20);
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #555;
+    text-align: left;
+    animation: fadeInExpand 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .faq-container {
+        padding: 20px;
+    }
+    
+    .faq-title {
+        font-size: 28px;
+        line-height: 48px;
+        margin-top: 60px;
+        margin-bottom: 24px;
+    }
+
+    .faq-item {
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .faq-question {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .faq-toggle {
+        font-size: 20px;
+    }
+
+    .faq-answer {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+}

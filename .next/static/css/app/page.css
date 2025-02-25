@@ -1,0 +1,1259 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/contact/contact.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+/* Contact Section - Main Container */
+.contact-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  box-sizing: border-box;
+  margin-top: 100px;
+  z-index: 1;
+  
+}
+
+/* Scoped Circle Container */
+.contact-circle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Ensure circles only appear inside the Contact page */
+.contact-circle-wrapper {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Background Layer behind the circles but above the page background */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7367FF;
+  z-index: 0;
+}
+
+/* Ensure Content Appears Above Circles */
+.content, .contact-details, .copyright-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Circle Styling */
+.contact-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: contact-move 20s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+/* Main content container */
+.content {
+  width: 1248px;
+  max-width: 1248px;
+  height: 446px;
+  border-radius: 32px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 48px;
+  margin-top: 132px; /* Space between content and contact details */
+}
+
+/* Heading styles */
+h1 {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 88px;
+  margin-top: 48px;
+}
+
+.blurr-text {
+  font-family: "DynaPuff", cursive;
+}
+
+.app-update-text {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  margin-top: -24px;
+  margin-bottom: 48px;
+}
+
+/* Contact details section */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1248px;
+  max-width: 1440px;
+  padding: 24px 48px;
+  border-radius: 24px;
+  margin: 100px;
+}
+
+/* Left section: Contact Us heading */
+.left-section h2 {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+/* Right section: Contact info and social icons */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-info p {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 46px;
+  margin-top: 24px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright Section */
+.copyright-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Line separator */
+.copyright-line {
+  width: 1248px;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 48px;
+}
+
+/* Copyright text */
+.copyright-text {
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+/* Unified Media Query for Tablets and Phones */
+@media (max-width: 1300px) {
+  /* Adjust content size */
+  .content {
+    padding: 32px;
+    border-radius: 24px;
+    margin-top: 100px;
+    width: calc(100% - 64px);
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  .app-update-text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 36px;
+  }
+
+  .contact-details {
+    width: calc(100% - 64px); /* Adjust width with margins */
+    max-width: 1000px;        /* Optional limit for large screens */
+    margin: 0 auto;           /* Center horizontally */
+    padding: 24px 16px;
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center content horizontally */
+    text-align: center;       /* Align text */
+    gap: 20px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Copyright */
+  .copyright-line {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .contact-info{
+    text-align: left;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+  .content{
+    width: calc(100% - 32px);
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .app-update-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  /* Contact details */
+  .left-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .copyright-text {
+    font-size: 14px;
+  }
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/dashboard/dashboard.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.dashboard-container {
+  position: relative;
+  height: 100vh; /* Full screen */
+  background-color: #7367FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  overflow: hidden;
+  z-index: 1; /* Ensure content is above the circles */
+}
+
+/* Blurr Logo in the Top Left */
+.blurr-logo {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  font-family: "DynaPuff", cursive;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* Blur effect only for the last 'r' in Blurr */
+.blurred-r {
+  display: inline-block;
+  filter: blur(4px);
+}
+
+/* Enable scrolling beyond the dashboard */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.fade-in-out {
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Final step styling */
+.final-content {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.final-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: -64px;
+}
+
+.blurr-text-1 {
+  font-family: "DynaPuff", cursive;
+  color: white;
+
+}
+
+/* Subtitle */
+.final-content h2 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 72px;
+}
+
+/* Email input and button */
+.email-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.email-input {
+  width: 400px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  border-radius: 300px;
+  background-color: white;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.waitlist-button {
+  width: 135px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 8px;
+}
+
+.waitlist-button:hover {
+  background: #444;
+}
+
+/* Input Field Styling */
+.email-input.invalid {
+  border: 4px solid #FF4D4D;
+  background-color: #FFECEC;
+}
+
+.error-message {
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Disabled Button Styling */
+.waitlist-button:disabled {
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Animated Circles - Background Effect */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -1; /* Send circles to the back */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  width: 560px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 32px;
+  text-align: center;
+  color: #212427;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #212427;
+  margin-top: 19px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Modal Email Text */
+.modal-email {
+  font-size: 18px;
+  font-weight: 400;
+  color: #212427;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.modal-email strong {
+  font-weight: 600;
+}
+
+/* Modal Subtext */
+.modal-subtext {
+  font-size: 18px;
+  font-weight: 400;
+  color: #212427;
+  line-height: 24px;
+}
+
+/* Modal Button */
+.modal-button {
+  width: 113px;
+  height: 48px;
+  padding: 0 32px;
+  background-color: #7367FF;
+  border-radius: 100px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.modal-button:hover {
+  background-color: #5747d6;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Larger Circle Sizes */
+.circle-0 { width: 770px; height: 770px; animation: move1 30s infinite alternate ease-in-out; left: 5vw; top: 5vh; }
+.circle-1 { width: 700px; height: 700px; animation: move2 28s infinite alternate ease-in-out; left: 80vw; top: 10vh; }
+.circle-2 { width: 830px; height: 830px; animation: move3 32s infinite alternate ease-in-out; left: 20vw; top: 60vh; }
+.circle-3 { width: 750px; height: 750px; animation: move4 26s infinite alternate ease-in-out; left: 50vw; top: 5vh; }
+.circle-4 { width: 730px; height: 730px; animation: move5 34s infinite alternate ease-in-out; left: 10vw; top: 30vh; }
+.circle-5 { width: 800px; height: 800px; animation: move6 36s infinite alternate ease-in-out; left: 70vw; top: 70vh; }
+.circle-6 { width: 720px; height: 720px; animation: move7 29s infinite alternate ease-in-out; left: 30vw; top: 80vh; }
+.circle-7 { width: 850px; height: 850px; animation: move8 40s infinite alternate ease-in-out; left: 85vw; top: 50vh; }
+.circle-8 { width: 760px; height: 760px; animation: move9 33s infinite alternate ease-in-out; left: 45vw; top: 20vh; }
+.circle-9 { width: 810px; height: 810px; animation: move10 35s infinite alternate ease-in-out; left: 15vw; top: 75vh; }
+.circle-10 { width: 870px; height: 870px; animation: move11 38s infinite alternate ease-in-out; left: 60vw; top: 5vh; }
+.circle-11 { width: 830px; height: 830px; animation: move12 33s infinite alternate ease-in-out; left: 20vw; top: 50vh; }
+.circle-12 { width: 800px; height: 800px; animation: move13 35s infinite alternate ease-in-out; left: 75vw; top: 10vh; }
+.circle-13 { width: 820px; height: 820px; animation: move14 29s infinite alternate ease-in-out; left: 40vw; top: 60vh; }
+.circle-14 { width: 860px; height: 860px; animation: move15 42s infinite alternate ease-in-out; left: 10vw; top: 90vh; }
+
+/* More Randomized Movements - Covers Entire Screen */
+@keyframes move1 {
+  0% { transform: translate(-10vw, -5vh); }
+  25% { transform: translate(70vw, 10vh); }
+  50% { transform: translate(20vw, 50vh); }
+  75% { transform: translate(-10vw, 80vh); }
+  100% { transform: translate(5vw, 10vh); }
+}
+
+@keyframes move2 {
+  0% { transform: translate(10vw, 40vh); }
+  25% { transform: translate(-60vw, 20vh); }
+  50% { transform: translate(40vw, 80vh); }
+  75% { transform: translate(-5vw, 90vh); }
+  100% { transform: translate(10vw, 40vh); }
+}
+
+@keyframes move3 {
+  0% { transform: translate(-50vw, 5vh); }
+  25% { transform: translate(5vw, 80vh); }
+  50% { transform: translate(30vw, 30vh); }
+  75% { transform: translate(-75vw, 20vh); }
+  100% { transform: translate(50vw, 5vh); }
+}
+
+@keyframes move4 {
+  0% { transform: translate(40vw, 70vh); }
+  25% { transform: translate(-80vw, 10vh); }
+  50% { transform: translate(10vw, 40vh); }
+  75% { transform: translate(-50vw, 60vh); }
+  100% { transform: translate(30vw, 80vh); }
+}
+
+@keyframes move5 {
+  0% { transform: translate(-75vw, 60vh); }
+  25% { transform: translate(40vw, -10vh); }
+  50% { transform: translate(20vw, 80vh); }
+  75% { transform: translate(-70vw, 40vh); }
+  100% { transform: translate(75vw, 60vh); }
+}
+
+@keyframes move6 {
+  0% { transform: translate(50vw, -10vh); }
+  25% { transform: translate(-40vw, 70vh); }
+  50% { transform: translate(80vw, 10vh); }
+  75% { transform: translate(-50vw, 90vh); }
+  100% { transform: translate(50vw, 5vh); }
+}
+
+@keyframes move7 {
+  0% { transform: translate(-5vw, 80vh); }
+  25% { transform: translate(80vw, -15vh); }
+  50% { transform: translate(-85vw, 50vh); }
+  75% { transform: translate(20vw, 75vh); }
+  100% { transform: translate(-5vw, 60vh); }
+}
+
+@keyframes move8 {
+  0% { transform: translate(80vw, 5vh); }
+  25% { transform: translate(-20vw, 90vh); }
+  50% { transform: translate(50vw, 30vh); }
+  75% { transform: translate(-90vw, 60vh); }
+  100% { transform: translate(70vw, 10vh); }
+}
+
+@keyframes move9 {
+  0% { transform: translate(30vw, 50vh); }
+  25% { transform: translate(-80vw, 5vh); }
+  50% { transform: translate(75vw, 40vh); }
+  75% { transform: translate(-10vw, 70vh); }
+  100% { transform: translate(30vw, 30vh); }
+}
+
+@keyframes move10 {
+  0% { transform: translate(50vw, 70vh); }
+  25% { transform: translate(-15vw, 30vh); }
+  50% { transform: translate(80vw, 50vh); }
+  75% { transform: translate(-90vw, 15vh); }
+  100% { transform: translate(40vw, 80vh); }
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+    font-size: 32px;
+  }
+
+  .fade-in-out,.final-content{
+    margin-top: -128px;
+  }
+
+  .email-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .email-input {
+    width: 256px;
+    height: 48px;
+
+  }
+  
+  .waitlist-button {
+    width: 300px;
+    margin-left: 0;
+    height: 48px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .blurr-logo {
+    font-size: 24px;
+    top: 10px;
+    left: 20px;
+  }
+
+  .final-content h1,
+  .final-content h2 {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+  
+  /* Adjust circles for smaller screens */
+  .circle {
+    width: 300px !important;
+    height: 300px !important;
+    filter: blur(80px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  .blurr-logo {
+    font-size: 20px;
+    top: 10px;
+    left: 20px;
+  }
+
+  .final-content h1{
+  margin-bottom: -32px;
+  }
+
+  .final-content h2 {
+    font-size: 36px;
+  }
+
+  .circle {
+    width: 250px !important;
+    height: 250px !important;
+    filter: blur(60px);
+    opacity: 0.4;
+  }
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/faq/faq.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.faq-container {
+    width: 90%;
+    max-width: 1248px;
+    margin: auto;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.faq-title {
+    font-family: Plus Jakarta Sans;
+    margin-top: 120px;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 96px;
+    text-align: center;
+    color: #212427;
+}
+
+.faq-list {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+}
+
+.faq-item.open {
+    transform: scale(1.02);
+    animation: fadeInExpand 0.3s ease-in-out;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    padding: 32px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease-in-out;
+    position: relative;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    color: #212427;
+}
+
+.faq-item.open {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 25px 0px rgba(115, 103, 255, 0.20);
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #555;
+    text-align: left;
+    animation: fadeInExpand 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .faq-container {
+        padding: 20px;
+    }
+    
+    .faq-title {
+        font-size: 28px;
+        line-height: 48px;
+        margin-top: 60px;
+        margin-bottom: 24px;
+    }
+
+    .faq-item {
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .faq-question {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .faq-toggle {
+        font-size: 20px;
+    }
+
+    .faq-answer {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/features/features.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+/* Feature container */
+.feature, .feature-reversed {
+  position: relative;
+  overflow: hidden; /* Ensures circles stay inside the component */
+}
+
+.features-container{
+  background-color: white;
+}
+
+/* Intro Section */
+.features-intro {
+    background: white;
+    padding: 104px 20px;
+    padding-bottom: 88px;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: black;
+    line-height: 48px;
+    max-width: 100vm;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .highlight {
+    color: #7367FF;
+    font-weight: 700;
+  }
+  
+  .highlight-gradient-l1 {
+    background: var(--L1, linear-gradient(90deg, #7367FF 6.02%, #7DE1AF 34.39%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+
+  }
+  
+  /* Gradient for 'trending content' */
+  .highlight-gradient-l2 {
+    background: var(--L2, linear-gradient(90deg, #A467FF 59.92%, #FFAE94 103.16%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+
+  }
+  
+  .line-break {
+    display: block;
+  }
+  .header-font {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  /* Features Section */
+  .features-section {
+    position: relative;
+    background: #F8F8FF;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 0px 0px 250px 250px;
+    z-index: 1;
+  }
+
+/* Circle container for animated circles */
+.circle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; /* Behind content but above background */
+  overflow: hidden;
+}
+  
+  /* Header */
+  .features-section h2 {
+    font-family: "Plus Jakarta Sans";
+    font-size: 64px;
+    font-style: normal;
+    margin-top: 90px;
+    margin-bottom: 200px;
+    font-weight: 600;
+    line-height: 96px;
+    color: #212427;
+    z-index: 1;
+  }
+  
+  /* Blurr Special Text */
+  .blurr-text-2 {
+    font-family: "DynaPuff", cursive;
+    margin-top: 32px;
+    font-size: 96px;
+    font-weight: 700;
+    color: #7367FF;
+    display: block; /* making the blur text to go to the next line */
+  }
+  
+  /* nly for the last 'r' */
+  .blurred-r {
+    display: inline-block;
+    filter: blur(4px);
+  }
+  
+  /* Feature Items */
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto;
+    flex-wrap: wrap;
+    gap: 200px;
+  }
+
+  .feature:first-of-type {
+    margin-bottom: 206px;
+}
+  
+.feature-reversed {
+    flex-direction: row-reverse;
+    margin-bottom: 320px; 
+
+}
+
+  .feature-rectangle {
+    width: 320px;
+    height: 694px;
+    border-radius: 24px;
+    border: 6px solid #7367FF;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-image {
+    padding: 0 0
+  }
+  
+  /* Feature Text */
+  .feature-text {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .feature-text h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #212427;
+    line-height: 64px;
+    margin-bottom: 24px;
+  }
+  
+  .feature-text p {
+    font-size: 26px;
+    font-weight: 450;
+    color: #212427;
+    line-height: 40px;
+    font-style: normal;
+    padding-right: 144px;
+  }
+
+  .madworks-logo {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: -64px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .feature {
+        flex-direction: column;
+        gap: 100px; 
+        align-items: center;
+    }
+
+    .feature-reversed{
+      margin-bottom: -120px;
+    }
+
+    .feature-text {
+        text-align: center;
+        max-width: 90%;
+        padding: 0;
+    }
+    .feature-text h2 {
+      font-size: 48px;
+    }
+    .feature-text p {
+      padding: 0;
+      margin-bottom: 200px;
+  }
+}
+
+  @media screen and (max-width: 480px) {
+    .features-section h2 {
+        font-size: 28px;
+        line-height: 72px;
+        margin-top: -32px;
+        margin-bottom: 64px;
+    }
+    .blurr-text-2{
+      margin-top: 16px;
+      font-size: 64px;
+    }
+    .madworks-logo {
+      width: 300px;
+    }
+
+    .features-intro{
+      padding: 32px;
+
+    }
+
+    .features-intro p {
+      font-size: 24px;
+    }
+
+    .feature .feature-image{
+      height: 480px;
+    }
+
+    .feature {
+        gap: 0px;
+    }
+
+    .feature-reversed{
+      margin-bottom: -120px;
+    }
+
+    .feature-text h3 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    .feature-text p {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0;
+    }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/userFeedback/userFeedback.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.user-feedback-container {
+    text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+/* Header */
+.user-feedback-header {
+    color: #212427;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 96px;
+    margin-top: 80px;
+    margin-bottom: 88px;
+}
+
+
+/* Scrolling feedback container */
+.feedback-scroller {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-33.33%); /* Move by exactly one batch to avoid gaps (since we have three batches) */
+    }
+}
+
+/* Stops animation on hover */
+.feedback-scroller:hover {
+    animation-play-state: paused;
+}
+
+.feedback-card {
+    width: 400px;
+    height: 555px;
+    background: #E7E4FF;;
+    border-radius: 32px;
+    padding: 50px 32px; 
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* change color and bit bigger when mouse is on */
+.feedback-card:hover {
+    background-color: #FAE8FF;
+    transform: scale(1.05);
+}
+
+/* Quote icon */
+.feedback-quote {
+    width: 24px;
+    height: 18px;
+    fill: #212427;
+    margin-top: 16px;
+    margin-left: 18px;
+}
+
+.feedback-text {
+    font-family: "Plus Jakarta Sans";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 18px;
+    color: #000000; 
+    text-align: left;
+}
+
+/* Highlighted word styling */
+.feedback-text .highlight {
+    font-weight: 700;  
+    color: #212427;  
+}
+
+/* User information */
+.feedback-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 18px;
+    margin-top: 75px;
+    margin-bottom: 12px;
+}
+
+.feedback-user-text {
+    display: flex;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    color: #212427;
+    font-weight: 400;
+    flex-direction: column;
+    line-height: 20px;
+    text-align: left;
+}
+
+/* User avatar */
+.feedback-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Unified Media Query for Tablets and Mobile */
+@media (max-width: 1200px) {
+    /* Header */
+    .user-feedback-header {
+        font-size: 36px;
+        line-height: 54px;
+        margin-top: 0;
+        margin-bottom: 36px;
+    }
+
+    /* Feedback Card */
+    .feedback-card {
+        width: 300px;
+        height: auto;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    /* Feedback Text */
+    .feedback-text {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 12px 18px;
+    }
+
+    /* User Avatar */
+    .feedback-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Smaller devices like phones */
+    @media (max-width: 600px) {
+        .user-feedback-header {
+            font-size: 28px;
+            line-height: 42px;
+            margin-top: -32px;
+            margin-bottom: 28px;
+        }
+
+        .feedback-card {
+            width: 240px;
+            height: auto;
+            padding: 24px 16px;
+        }
+
+        .feedback-text {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .feedback-avatar {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
