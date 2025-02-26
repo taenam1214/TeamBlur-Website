@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
 
         <div className="right-section">
           <div className="contact-info">
-            <p>Email: blahblah@blur.com</p>
+            <p>Email: info@blurapp.io</p>
             <p>Phone: (608)-622-0120</p>
             <div className="social-icons">
               <a href="https://www.linkedin.com/company/getblurred" target="_blank" rel="noopener noreferrer">
