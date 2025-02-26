@@ -82,31 +82,32 @@ const Dashboard: React.FC = () => {
       )}
       {step === 2 && (
         <div className="final-content">
-          <h1>
-            Get Ready to 
-            <span className="blurr-text-1"> Blur<span className="blurred-r">r</span></span>
-          </h1>
-          <h2>Join the Waitlist</h2>
-          <div className="email-container">
-            <input
-              type="email"
-              placeholder="Enter email address"
-              className={`email-input ${!isValidEmail && email ? 'invalid' : ''}`}
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <button
-              className="waitlist-button"
-              disabled={!isValidEmail}
-              onClick={handleJoinWaitlist}
-            >
-              Join waitlist
-            </button>
-          </div>
-          {!isValidEmail && email && (
-            <p className="error-message">Please enter a valid email address.</p>
-          )}
+        <h1>
+          Get Ready to <span className="blurr-text-1"> Blur<span className="blurred-r">r</span></span>
+        </h1>
+        <h2>Join the Waitlist</h2>
+        <div className="email-container">
+          <input
+            type="email"
+            placeholder="Enter email address"
+            className={`email-input ${!isValidEmail && email ? 'invalid' : ''}`}
+            value={email}
+            onChange={handleEmailChange}
+          />
+          <button
+            className="waitlist-button"
+            disabled={!isValidEmail}
+            onClick={handleJoinWaitlist}
+          >
+            Join waitlist
+          </button>
         </div>
+        {/* Always render the error message element */}
+        <p className="error-message">
+          {(!isValidEmail && email) ? "Please enter a valid email address." : "\u00A0"}
+        </p>
+      </div>
+      
       )}
 
       {showModal && (
