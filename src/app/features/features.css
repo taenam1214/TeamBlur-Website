@@ -14,7 +14,7 @@
 /* Intro Section */
 .features-intro {
     background: white;
-    padding: 104px 20px;
+    padding: 88px 20px;
     padding-bottom: 88px;
     text-align: center;
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -158,9 +158,9 @@
   }
 
   .madworks-logo {
-    width: 400px; /* Adjust size as needed */
+    width: 305px; /* Adjust size as needed */
     height: auto;
-    margin-bottom: -64px;
+    margin-bottom: -48px;
   }
 
   @media screen and (max-width: 1200px) {

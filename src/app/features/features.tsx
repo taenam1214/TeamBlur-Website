@@ -27,7 +27,7 @@ const Features: React.FC = () => {
     <section className="features-container">
       {/* Intro Section with white background */}
       <div className="features-intro">
-        <Image src={madworksLogo} alt="Madworks Logo" className="madworks-logo" width={400} height={300} />
+        <Image src={madworksLogo} alt="Madworks Logo" className="madworks-logo" width={235} height={40} />
         <p>
           <span className="highlight">Blur</span> is a social platform{" "}
           <span className="line-break">where college students can connect </span>
