@@ -87,7 +87,7 @@
     font-style: normal;
     margin-top: 90px;
     margin-bottom: 200px;
-    font-weight: 600;
+    font-variation-settings: 'wght' 550;
     line-height: 96px;
     color: #212427;
     z-index: 1;
@@ -142,7 +142,7 @@
   
   .feature-text h3 {
     font-size: 48px;
-    font-weight: 600;
+    font-variation-settings: 'wght' 550;
     color: #212427;
     line-height: 64px;
     margin-bottom: 24px;

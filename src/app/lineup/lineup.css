@@ -26,7 +26,7 @@
   /* Title Styling */
   .lineup-title {
     font-size: 32px;
-    font-weight: 600;
+    font-variation-settings: 'wght' 550;
     color: #18181B;
   }
   

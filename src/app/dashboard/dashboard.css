@@ -70,7 +70,7 @@ body {
 /* Subtitle */
 .final-content h2 {
   font-size: 64px;
-  font-weight: 600;
+  font-variation-settings: 'wght' 550;
   margin-bottom: 72px;
 }
 
@@ -178,7 +178,7 @@ body {
 /* Modal Title */
 .modal-title {
   font-size: 26px;
-  font-weight: 600;
+  font-variation-settings: 'wght' 550;
   color: #212427;
   margin: 0;
   text-align: center;
@@ -195,7 +195,7 @@ body {
 }
 
 .modal-email strong {
-  font-weight: 600;
+  font-variation-settings: 'wght' 550;
 }
 
 /* Modal Subtext */
@@ -216,7 +216,7 @@ body {
   border-radius: 100px;
   color: white;
   font-size: 16px;
-  font-weight: 600;
+  font-variation-settings: 'wght' 550;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
