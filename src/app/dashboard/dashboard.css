@@ -31,12 +31,6 @@
   opacity: 0;
 }
 
-/* Blur effect only for the last 'r' in Blurr */
-.blurred-r {
-  display: inline-block;
-  filter: blur(4px);
-}
-
 /* Enable scrolling beyond the dashboard */
 body {
   margin: 0;

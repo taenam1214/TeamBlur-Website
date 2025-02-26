@@ -106,7 +106,7 @@
   /* nly for the last 'r' */
   .blurred-r {
     display: inline-block;
-    filter: blur(4px);
+    filter: blur(2px);
   }
   
   /* Feature Items */
