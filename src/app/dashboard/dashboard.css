@@ -71,6 +71,7 @@ body {
 .final-content h2 {
   font-size: 64px;
   font-variation-settings: 'wght' 550;
+  padding-top: 32px;
   margin-bottom: 72px;
 }
 
@@ -349,10 +350,17 @@ body {
   .dashboard-container {
     padding: 20px;
     font-size: 32px;
+    font-variation-settings: 'wght' 550;
   }
 
   .fade-in-out,.final-content{
     margin-top: -128px;
+    font-size: 32px;
+    font-variation-settings: 'wght' 550;
+  }
+
+  .blurr-logo{
+    display: none;
   }
 
   .email-container {
@@ -360,8 +368,9 @@ body {
   }
 
   .email-input {
-    width: 267px;
+    max-width: 267px;
     height: 48px;
+    padding-left: 16px;
   }
 
   .waitlist-text-desktop {
@@ -373,23 +382,21 @@ body {
   }
   
   .waitlist-button {
-    width: 78px;
+    max-width: 78px;
     margin-left: 0;
     height: 48px;
-    font-size: 14px;
-    padding: 0 16px;
-  }
 
-  .blurr-logo {
-    font-size: 24px;
-    top: 10px;
-    left: 20px;
   }
 
   .final-content h1,
   .final-content h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 32px;
+  }
+
+  .final-content h2{
+    margin-top: -64px;
+    margin-bottom: 56px;
   }
   
   /* Adjust circles for smaller screens */
@@ -398,33 +405,5 @@ body {
     height: 300px !important;
     filter: blur(80px);
     opacity: 0.5;
-  }
-}
-
-@media (max-width: 480px) {
-  .dashboard-container {
-    font-size: 36px;
-    padding: 10px;
-  }
-
-  .blurr-logo {
-    font-size: 20px;
-    top: 10px;
-    left: 20px;
-  }
-
-  .final-content h1{
-  margin-bottom: -32px;
-  }
-
-  .final-content h2 {
-    font-size: 36px;
-  }
-
-  .circle {
-    width: 250px !important;
-    height: 250px !important;
-    filter: blur(60px);
-    opacity: 0.4;
   }
 }
