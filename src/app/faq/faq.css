@@ -20,7 +20,7 @@
 
 .faq-title {
     font-family: Plus Jakarta Sans;
-    margin-top: 120px;
+    margin-top: 140px;
     font-size: 64px;
     font-variation-settings: 'wght' 550;
     line-height: 96px;
@@ -93,6 +93,7 @@
     color: #555;
     text-align: left;
     animation: fadeInExpand 0.3s ease-in-out;
+    line-height: 38px;
 }
 
 @media (max-width: 600px) {
