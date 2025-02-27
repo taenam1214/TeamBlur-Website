@@ -49,7 +49,15 @@
     background-clip: text;
     color: transparent;
     font-weight: 700;
-
+  }
+  
+  .features-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
   
   .line-break {
@@ -59,19 +67,23 @@
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 
-  /* Features Section */
-  .features-section {
+  .features-section-wrapper {
     position: relative;
-    background: #F8F8FF;
-    padding: 80px 20px;
-    text-align: center;
-    border-radius: 0px 0px 1000px 1000px;
-    z-index: 1;
     width: calc(100vw + 500px);
     margin-left: -250px;
+    background: #F8F8FF;
+    border-radius: 0px 0px 1000px 1000px;
     overflow: hidden;
   }
-
+  
+  .features-section {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  
 /* Circle container for animated circles */
 .circle-container {
   position: absolute;
@@ -167,75 +179,34 @@
     margin-bottom: -48px;
   }
 
-  @media screen and (max-width: 1200px) {
-    .feature {
-        flex-direction: column;
-        gap: 100px; 
-        align-items: center;
-    }
+  @media (max-width: 932px) {
 
-    .feature-reversed{
-      margin-bottom: -120px;
-    }
-
-    .feature-text {
-        text-align: center;
-        max-width: 90%;
-        padding: 0;
-    }
-    .feature-text h2 {
-      font-size: 48px;
-    }
-    .feature-text p {
-      padding: 0;
-      margin-bottom: 200px;
-  }
-}
-
-  @media screen and (max-width: 480px) {
-    .features-section h2 {
-        font-size: 28px;
-        line-height: 72px;
-        margin-top: -32px;
-        margin-bottom: 64px;
-    }
-    .blurr-text-2{
-      margin-top: 16px;
-      font-size: 64px;
-    }
     .madworks-logo {
-      width: 300px;
+      width: 200px;
+      margin-bottom: -24px;
     }
 
     .features-intro{
-      padding: 32px;
-
+      padding-top: 58px;
+      padding-bottom: 58px;
+      font-size: 16px;
+      line-height: 22px;
     }
 
-    .features-intro p {
+    .features-section{
+      padding-top: 0;
+    }
+
+    .features-section h2{
+      text-align: center;
+      margin-top: 0px;
+    }
+    .header-font{
       font-size: 24px;
+      text-align: center;
     }
-
-    .feature .feature-image{
-      height: 480px;
-    }
-
-    .feature {
-        gap: 0px;
-    }
-
-    .feature-reversed{
-      margin-bottom: -120px;
-    }
-
-    .feature-text h3 {
-        font-size: 30px;
-        line-height: 48px;
-    }
-
-    .feature-text p {
-        font-size: 18px;
-        line-height: 24px;
-        padding: 0;
+    .blurr-text-2{
+      margin-top: -32px;
+      font-size: 64px;
     }
 }

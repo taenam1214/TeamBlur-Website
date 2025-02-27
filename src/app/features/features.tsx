@@ -37,41 +37,44 @@ const Features: React.FC = () => {
           </span>
         </p>
       </div>
-
-      {/* Features Section with different background */}
-      <div className="features-section">
-        {/* Animated Circles for the entire features section */}
-        <div className="circle-container">
-          {renderCircles()}
-        </div>
-
-        <h2>
-          <span className="header-font">What you can do with</span>{" "}
-          <span className="blurr-text-2">
-            Blur<span className="blurred-r">r</span>
-          </span>
-        </h2>
-
-        {/* Feature 1 - Standard Layout */}
-        <div className="feature">
-          <Image src={main} alt="Feature 1" className="feature-image" width={600} height={400} />
-          <div className="feature-text">
-            <h3>Get blurred and mingled!</h3>
-            <p>
-              Share your campus life anonymously and explore other campus students&apos; lives
-              across the states.
-            </p>
+      <div className="features-section-wrapper">
+        {/* Features Section with different background */}
+        <div className="features-section">
+          {/* Animated Circles for the entire features section */}
+          <div className="circle-container">
+            {renderCircles()}
           </div>
-        </div>
 
-        {/* Feature 2 - Reversed Layout */}
-        <div className="feature feature-reversed">
-        <Image src={channel} alt="Feature 2" className="feature-image" width={600} height={400} />
-          <div className="feature-text">
-            <h3>Share similar interests!</h3>
-            <p>
-              Get the info and advice you need through topic-based channels. Whether it&apos;s academics, social life, or career tips, join discussions that help you grow.
-            </p>
+          <div className="features-header">
+            <h2>
+              <span className="header-font">What you can do with</span>{" "}
+              <span className="blurr-text-2">
+                Blur<span className="blurred-r">r</span>
+              </span>
+            </h2>
+          </div>
+
+          {/* Feature 1 - Standard Layout */}
+          <div className="feature">
+            <Image src={main} alt="Feature 1" className="feature-image" width={600} height={400} />
+            <div className="feature-text">
+              <h3>Get blurred and mingled!</h3>
+              <p>
+                Share your campus life anonymously and explore other campus students&apos; lives
+                across the states.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 2 - Reversed Layout */}
+          <div className="feature feature-reversed">
+          <Image src={channel} alt="Feature 2" className="feature-image" width={600} height={400} />
+            <div className="feature-text">
+              <h3>Share similar interests!</h3>
+              <p>
+                Get the info and advice you need through topic-based channels. Whether it&apos;s academics, social life, or career tips, join discussions that help you grow.
+              </p>
+            </div>
           </div>
         </div>
       </div>
