@@ -110,6 +110,9 @@ body {
   transition: 0.3s ease;
   margin-left: 8px;
 }
+.waitlist-text-mobile {
+  display: none;
+}
 
 .waitlist-button:hover {
   background: #444;
@@ -342,7 +345,7 @@ body {
 
 
 /* Responsive Design for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 932px) {
   .dashboard-container {
     padding: 20px;
     font-size: 32px;
@@ -353,18 +356,24 @@ body {
   }
 
   .email-container {
-    flex-direction: column;
     gap: 12px;
   }
 
   .email-input {
-    width: 256px;
+    width: 267px;
     height: 48px;
+  }
 
+  .waitlist-text-desktop {
+    display: none;
+  }
+
+  .waitlist-text-mobile {
+    display: inline;
   }
   
   .waitlist-button {
-    width: 300px;
+    width: 78px;
     margin-left: 0;
     height: 48px;
     font-size: 14px;

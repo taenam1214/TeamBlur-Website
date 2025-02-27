@@ -106,7 +106,8 @@ const Dashboard: React.FC = () => {
             disabled={!isValidEmail}
             onClick={handleJoinWaitlist}
           >
-            Join waitlist
+            <span className="waitlist-text-desktop">Join waitlist</span>
+            <span className="waitlist-text-mobile">Join</span>
           </button>
         </div>
         {/* Always render the error message element */}
