@@ -183,6 +183,10 @@ h1 {
   margin-bottom: 48px;
 }
 
+.mobile-heading {
+  display: none;
+}
+
 @media (max-width: 932px) {
 
   .contact-section {
@@ -191,7 +195,7 @@ h1 {
   height: auto; /* Allow content to determine height */
   min-height: auto; /* Remove forced full viewport height */
   padding-bottom: 0; /* Ensure no extra bottom padding */
-}
+  }
   /* Adjust content size */
   .content {
     padding: 16px;
@@ -245,6 +249,13 @@ h1 {
   .left-section{
     text-align: left;
     width: 100%;
+  }
+
+  .desktop-heading {
+    display: none; /* Hide the separate text for small screens */
+  }
+  .mobile-heading {
+    display: block; /* Show the combined text */
   }
 
   .right-section{
