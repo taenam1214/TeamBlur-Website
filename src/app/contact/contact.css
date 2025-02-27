@@ -104,20 +104,28 @@ h1 {
   margin-bottom: 48px;
 }
 
+
 /* Contact details section */
 .contact-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1248px;
+  width: 90%;
   max-width: 1440px;
   padding: 24px 48px;
   border-radius: 24px;
   margin: 100px;
+  flex-wrap: wrap;
 }
 
-/* Left section: Contact Us heading */
+.left-section {
+  flex: 1; 
+  min-width: 300px;
+}
+
 .left-section h2 {
+  flex: 1; 
+  min-width: 300px;
   color: #FFF;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 48px;
@@ -126,13 +134,16 @@ h1 {
   margin: 0;
 }
 
-/* Right section: Contact info and social icons */
 .right-section {
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   gap: 12px;
 }
+
 
 .contact-info p {
   color: #FFF;

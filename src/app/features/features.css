@@ -129,11 +129,12 @@
   .feature {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; 
     margin: 200px auto;
     flex-wrap: wrap;
     gap: auto;
   }
+
 
   .feature:first-of-type {
     margin-bottom: 206px;
@@ -201,9 +202,6 @@
       text-align: center;
       margin-top: 0px;
       margin-bottom: 0px;
-    }
-
-    .features-header{
     }
 
     .header-font{
