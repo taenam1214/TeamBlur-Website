@@ -15,8 +15,8 @@ const dynaPuff = DynaPuff({
 });
 
 export const metadata = {
-  title: "Blur",
-  description: "Migrated from Vite to Next.js",
+  title: "Blur App",
+  description: "",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
