@@ -13,25 +13,25 @@ import quoteLogo from "../../assets/quote.svg";
 
 const feedbacks = [
   {
-    text: "The most unique aspect is the posts 🔥 that come from other schools. It’s exciting to see what’s trending beyond my own campus! 🌍",
+    text: "The most unique aspect is the posts 🔥 that come from other schools. It’s exciting to see what’s trending beyond my own campus! 🌍"+ '"',
     avatar: wisconsinLogo,
     userLine1: "Anonymous student from",
     userLine2: "University of Wisconsin",
   },
   {
-    text: "I really like how it creates an open space where students can freely ask questions and talk about anything they want.",
+    text: "I really like how it creates an open space where students can freely ask questions and talk about anything they want."+ '"',
     avatar: washingtonLogo,
     userLine1: "Anonymous student from",
     userLine2: "University of Washington",
   },
   {
-    text: "I love the UI flow ❤️ Unlike other anonymous apps, this one actually feels like a real community rather than just random posts!",
+    text: "I love the UI flow ❤️ Unlike other anonymous apps, this one actually feels like a real community rather than just random posts!"+ '"',
     avatar: berkeleyLogo,
     userLine1: "Anonymous student from",
     userLine2: "UC Berkeley",
   },
   {
-    text: "I like how students can connect easily with other schools. It enhances my experience and provides a unique student culture.",
+    text: "I like how students can connect easily with other schools. It enhances my experience and provides a unique student culture."+ '"',
     avatar: michiganLogo,
     userLine1: "Anonymous student from",
     userLine2: "University of Michigan",

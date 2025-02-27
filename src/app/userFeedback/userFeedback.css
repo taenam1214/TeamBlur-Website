@@ -14,7 +14,7 @@
     color: #212427;
     text-align: center;
     font-size: 64px;
-    font-variation-settings: 'wght' 550;
+    font-weight: 600;
     line-height: 96px;
     margin-top: 80px;
     margin-bottom: 88px;
@@ -44,15 +44,15 @@
 }
 
 .feedback-card {
-    width: 400px;
-    height: 555px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+    height: 455px;
     background: #E7E4FF;;
     border-radius: 32px;
     padding: 50px 32px; 
-    flex-shrink: 0;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -93,8 +93,8 @@
     align-items: center;
     gap: 10px;
     margin-left: 18px;
-    margin-top: 75px;
     margin-bottom: 12px;
+    margin-top: auto;
 }
 
 .feedback-user-text {
