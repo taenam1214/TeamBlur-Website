@@ -126,6 +126,8 @@ body {
   font-size: 14px;
   margin-top: 8px;
   min-height: 20px;
+  text-align: left;
+  margin-left: 41px;
 }
 
 /* Disabled Button Styling */
