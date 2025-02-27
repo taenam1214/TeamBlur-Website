@@ -73,12 +73,15 @@
 
 .feedback-text {
     font-family: "Plus Jakarta Sans";
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 40px;
     margin-left: 18px;
     color: #000000; 
     text-align: left;
+}
+
+.header-quote{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
 }
 
 /* Highlighted word styling */
@@ -116,7 +119,7 @@
 }
 
 /* Unified Media Query for Tablets and Mobile */
-@media (max-width: 1200px) {
+@media (max-width: 932px) {
     /* Header */
     .user-feedback-header {
         font-size: 36px;
@@ -127,48 +130,25 @@
 
     /* Feedback Card */
     .feedback-card {
-        width: 300px;
-        height: auto;
+        width: 267px;
+        height: 340px;
         padding: 30px 20px;
         border-radius: 20px;
-    }
-
-    /* Feedback Text */
-    .feedback-text {
-        font-size: 18px;
-        line-height: 30px;
-        margin: 12px 18px;
     }
 
     /* User Avatar */
     .feedback-avatar {
         width: 36px;
-        height: 36px;
+        height: 36px
+        36px;
     }
-
-    /* Smaller devices like phones */
-    @media (max-width: 600px) {
-        .user-feedback-header {
-            font-size: 28px;
-            line-height: 42px;
-            margin-top: -32px;
-            margin-bottom: 28px;
-        }
-
-        .feedback-card {
-            width: 240px;
-            height: auto;
-            padding: 24px 16px;
-        }
-
-        .feedback-text {
-            font-size: 16px;
-            line-height: 28px;
-        }
-
-        .feedback-avatar {
-            width: 32px;
-            height: 32px;
-        }
+    .header-quote{
+        font-size: 18px;
+        line-height: 30px; /* adjust as needed */
+    }
+    
+    .feedback-user-text {
+        font-size: 12px;
+        line-height: 16px; /* adjust as needed */
     }
 }

@@ -62,7 +62,7 @@ const UserFeedback: React.FC = () => {
               width={24} 
               height={18} 
             />
-            <p className="feedback-text"><span className="header-font">{feedback.text}</span></p>
+            <p className="feedback-text"><span className="header-quote">{feedback.text}</span></p>
             <div className="feedback-user">
               <Image 
                 src={feedback.avatar} 
@@ -72,8 +72,8 @@ const UserFeedback: React.FC = () => {
                 height={50} 
               />
               <div className="feedback-user-text">
-                <span><span className="header-font">{feedback.userLine1}</span></span>
-                <span className="feedback-user-school"><span className="header-font">{feedback.userLine2}</span></span>
+                <span><span className="header-font1">{feedback.userLine1}</span></span>
+                <span className="feedback-user-school"><span className="header-font1">{feedback.userLine2}</span></span>
               </div>
             </div>
           </div>
