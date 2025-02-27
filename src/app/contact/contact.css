@@ -13,7 +13,7 @@
   box-sizing: border-box;
   margin-top: 100px;
   z-index: 1;
-  
+  overflow: hidden;
 }
 
 /* Scoped Circle Container */
@@ -183,25 +183,33 @@ h1 {
   margin-bottom: 48px;
 }
 
-/* Unified Media Query for Tablets and Phones */
-@media (max-width: 1300px) {
+@media (max-width: 932px) {
+
+  .contact-section {
+  margin-top: 24px;
+  justify-content: flex-start;
+  height: auto; /* Allow content to determine height */
+  min-height: auto; /* Remove forced full viewport height */
+  padding-bottom: 0; /* Ensure no extra bottom padding */
+}
   /* Adjust content size */
   .content {
-    padding: 32px;
+    padding: 16px;
     border-radius: 24px;
-    margin-top: 100px;
-    width: calc(100% - 64px);
+    margin-top: 0;
+    width: calc(100% - 32px);
+    height: 210px;
   }
-
   h1 {
-    font-size: 48px;
+    font-size: 24px;
     line-height: 64px;
+    margin-top: 0;
   }
 
   .app-update-text {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 24px;
   }
 
   .contact-details {
@@ -210,17 +218,22 @@ h1 {
     margin: 0 auto;           /* Center horizontally */
     padding: 24px 16px;
     flex-direction: column;   /* Stack items vertically */
-    align-items: center;      /* Center content horizontally */
-    text-align: center;       /* Align text */
+    align-items: left;
+    text-align: left;       /* Align text */
     gap: 20px;
+    margin-top: 20px;
   }
 
   .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 16px;
+    gap: 31px;
     width: 100%;
     margin-top: 16px;
+  }
+
+  .social-icons img{
+    width: 24px;
+    height: 24px;
   }
 
   /* Copyright */
@@ -229,42 +242,46 @@ h1 {
     margin-bottom: 16px;
   }
 
-  .contact-info{
+  .left-section{
     text-align: left;
-  }
-}
-
-/* Mobile Screens */
-@media (max-width: 600px) {
-  .content{
-    width: calc(100% - 32px);
+    width: 100%;
   }
 
-  h1 {
-    font-size: 36px;
-    line-height: 48px;
+  .right-section{
+    text-align: left;
+    width: 100%;
   }
 
-  .app-update-text {
-    font-size: 18px;
-    line-height: 24px;
+  .left-section h2{
+    font-size: 20px;
   }
 
-  /* Contact details */
-  .left-section h2 {
-    font-size: 28px;
-  }
-
-  .contact-info p {
+  .contact-info p{
+    width: 100%;
     font-size: 16px;
   }
 
-  .social-icons img {
-    width: 24px;
-    height: 24px;
+  .copyright-wrapper{
+    margin: 0;
+    width: 100%;
+  }
+  .copyright-line {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+  .copyright-text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
 
-  .copyright-text {
-    font-size: 14px;
+  @media (max-width: 740px){
+    .content {
+      margin-top: 30px;
+    }
   }
 }
