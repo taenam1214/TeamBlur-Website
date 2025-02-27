@@ -358,6 +358,9 @@ body {
     font-size: 32px;
     font-variation-settings: 'wght' 550;
   }
+  .fade-in-out {
+    line-height: 1.5; /* Adjust this value as needed */
+  }
 
   .blurr-logo{
     display: none;
@@ -388,6 +391,9 @@ body {
 
   }
 
+  .error-message{
+    margin-left: 16px;
+  }
   .final-content h1,
   .final-content h2 {
     font-size: 32px;
@@ -406,4 +412,34 @@ body {
     filter: blur(80px);
     opacity: 0.5;
   }
+
+  .modal-content{
+    height: 220px;
+    width: 300px;
+    padding-bottom: 32px;
+  }
+
+  .modal-title{
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .modal-email{
+    font-size: 16px;
+    line-height: 24px;
+    font-variation-settings: 'wght' 350;
+  }
+  .modal-subtext{
+    font-size: 16px;
+    line-height: 20px;
+    font-variation-settings: 'wght' 350;
+    margin-bottom: 24px;
+  }
+  .modal-email strong {
+    display: block;
+  }
+  .modal-button{
+    width: 115px;
+    font-weight: 400;
+  }
+  
 }
