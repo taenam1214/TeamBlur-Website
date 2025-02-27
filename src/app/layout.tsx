@@ -15,7 +15,7 @@ const dynaPuff = DynaPuff({
 });
 
 export const metadata = {
-  title: "Blur Website",
+  title: "Blur",
   description: "Migrated from Vite to Next.js",
 };
 
