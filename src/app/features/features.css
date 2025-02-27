@@ -84,17 +84,17 @@
     z-index: 1;
   }
   
-/* Circle container for animated circles */
-.circle-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0; /* Behind content but above background */
-  overflow: hidden;
-}
+  /* Circle container for animated circles */
+  .circle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; /* Behind content but above background */
+    overflow: hidden;
+  }
   
   /* Header */
   .features-section h2 {
@@ -132,7 +132,7 @@
     justify-content: center;
     margin: 200px auto;
     flex-wrap: wrap;
-    gap: 200px;
+    gap: auto;
   }
 
   .feature:first-of-type {
@@ -200,13 +200,48 @@
     .features-section h2{
       text-align: center;
       margin-top: 0px;
+      margin-bottom: 0px;
     }
+
+    .features-header{
+    }
+
     .header-font{
       font-size: 24px;
       text-align: center;
     }
     .blurr-text-2{
-      margin-top: -32px;
-      font-size: 64px;
+      margin-top: -48px;
+      font-size: 48px;
+    }
+
+    .feature, .feature-reversed{
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-direction: column;
+    }
+    .feature-image{
+      height: 600px;
+      width: auto;
+    }
+
+    .feature-text{
+      text-align: center;
+      max-width: 300px;
+    }    
+    .feature-text h3{
+      font-size: 20px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .feature-text p{
+      margin-top: 0;
+      margin-bottom: 88px;
+      font-size: 17px;
+      text-align: center;
+      padding:0%;
+      line-height: 22px;
     }
 }
