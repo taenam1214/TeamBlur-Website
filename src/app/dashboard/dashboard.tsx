@@ -24,8 +24,15 @@ const Dashboard: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = step < 2 ? "hidden" : "auto";
+    if (step < 2) {
+      document.documentElement.style.overflow = "hidden"; // Apply to <html>
+      document.body.style.overflow = "hidden"; // Apply to <body>
+    } else {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    }
   }, [step]);
+  
 
   // Validate email format
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
