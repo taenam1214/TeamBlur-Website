@@ -222,7 +222,7 @@ h1 {
   min-height: 20px;
   text-align: left;
   width: 100%;
-  margin-left: 16px;
+  margin-left: 0;
 }
 
 
@@ -262,6 +262,7 @@ h1 {
 
   .error-message-contact{
     margin-left: 64px;
+    
   }
 
   h1 {
