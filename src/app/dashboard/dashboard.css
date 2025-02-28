@@ -54,6 +54,10 @@ body {
 .final-content {
   text-align: center;
   animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .final-content h1 {
@@ -79,10 +83,9 @@ body {
 /* Email input and button */
 .email-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 400px;
   gap: 12px;
   flex-wrap: nowrap; 
 }
@@ -90,7 +93,7 @@ body {
 .email-input {
   flex-grow: 1;
   width: 100%;
-  max-width: 280px;
+  max-width: 450px;
   height: 56px;
   padding: 0 16px;
   font-size: 16px;
@@ -103,7 +106,7 @@ body {
 }
 
 .waitlist-button {
-  width: 100px;
+  width: 135px;
   height: 56px;
   font-size: 16px;
   font-weight: 500;
