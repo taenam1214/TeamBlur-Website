@@ -56,6 +56,8 @@
     transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
 }
 
+
+
 /* change color and bit bigger when mouse is on */
 .feedback-card:hover {
     background-color: #FAE8FF;
@@ -72,10 +74,15 @@
 }
 
 .feedback-text {
+    color: #000;
     font-family: "Plus Jakarta Sans";
-    margin-left: 18px;
-    color: #000000; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500; 
+    line-height: 24px; 
+    flex-shrink: 0;
     text-align: left;
+    width: 250px;
 }
 
 .header-quote{
@@ -103,11 +110,11 @@
 .feedback-user-text {
     display: flex;
     font-family: "Plus Jakarta Sans";
-    font-size: 14px;
+    font-size: 12px;
     color: #212427;
     font-weight: 400;
     flex-direction: column;
-    line-height: 20px;
+    line-height: 18px; 
     text-align: left;
 }
 
@@ -130,25 +137,31 @@
 
     /* Feedback Card */
     .feedback-card {
-        width: 267px;
-        height: 340px;
+        width: 260px;
+        height: 320px;
         padding: 30px 20px;
-        border-radius: 20px;
     }
 
-    /* User Avatar */
+    
+    .feedback-text {
+        width: 220px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-left: 20px; 
+    }
+
+    .feedback-user-text {
+        font-size: 10px;
+        line-height: 15px; 
+    }
+
     .feedback-avatar {
-        width: 36px;
-        height: 36px
-        36px;
+        width: 32px;
+        height: 32px;
     }
     .header-quote{
         font-size: 18px;
-        line-height: 30px; /* adjust as needed */
+        line-height: 30px;
     }
     
-    .feedback-user-text {
-        font-size: 12px;
-        line-height: 16px; /* adjust as needed */
-    }
 }

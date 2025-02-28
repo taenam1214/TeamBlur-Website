@@ -111,8 +111,8 @@ const Contact: React.FC = () => {
       <div className="contact-details">
         <div className="left-section">
           <h2 className="desktop-heading">Do you have more</h2>
-          <h2 className="desktop-heading">Questions?</h2>
-          <h2 className="mobile-heading">Do you have more Questions?</h2>
+          <h2 className="desktop-heading">questions?</h2>
+          <h2 className="mobile-heading">Do you have more questions?</h2>
           <h2>Contact Us!</h2>
         </div>
 

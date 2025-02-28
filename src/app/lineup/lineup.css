@@ -2,15 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
 .lineup-container {
-    margin-top: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: #ffffff; /* Maintains white background */
-    animation: fadeIn 1s ease-in-out;
-  }
+  margin-top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 16px; /* 좌우 여백 유지 */
+  background: #ffffff;
+  animation: fadeIn 1s ease-in-out;
+  width: calc(100% - 32px); /* 작은 화면에서도 좌우 16px margin 적용 */
+  max-width: 600px; /* 최대 크기 제한 */
+  box-sizing: border-box; /* padding 포함한 크기 계산 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
   
   @keyframes fadeIn {
     from {
@@ -54,16 +60,17 @@
   
   /* Email Input & Button */
   .lineup-email-container {
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     display: flex;
     align-items: center;
-    width: 100%;
     border: 2px solid #7367FF;
     border-radius: 20px;
     background: #FFF;
     padding: 5px 5px;
     gap: 10px;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   
   .lineup-email-input {
@@ -77,6 +84,7 @@
     background: transparent;
     border-radius: 20px;
   }
+  
   
   .lineup-email-input::placeholder {
     color: #999;
@@ -112,9 +120,14 @@
     color: #7367FF;
     margin-top: 10px;
   }
-  
+
   /* Mobile Responsive */
   @media (max-width: 768px) {
+    .lineup-container {
+      width: calc(100% - 32px); /* 400px 이하에서도 margin 유지 */
+      padding: 60px 16px;
+    }
+    
     .lineup-email-container {
       flex-direction: row;
       width: 100%;
