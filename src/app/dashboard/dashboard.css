@@ -16,6 +16,7 @@
   font-weight: 700;
   overflow: hidden;
   z-index: 1; /* Ensure content is above the circles */
+  padding: 0 10vw; 
 }
 
 /* Blurr Logo in the Top Left */
@@ -78,29 +79,32 @@ body {
 /* Email input and button */
 .email-container {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  
+  width: 100%;
+  max-width: 400px;
+  gap: 12px;
+  flex-wrap: nowrap; 
 }
 
 .email-input {
-  width: 400px;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 280px;
   height: 56px;
-  padding: 0 24px;
+  padding: 0 16px;
   font-size: 16px;
   border-radius: 300px;
   background-color: white;
-  border: 4px solid transparent; /* Reserve space for the border */
+  border: 2px solid transparent;
   outline: none;
   color: black;
-  box-sizing: border-box; /* Ensure border doesn't affect the size */
+  box-sizing: border-box;
 }
 
 .waitlist-button {
-  width: 135px;
+  width: 100px;
   height: 56px;
-  padding: 0 24px;
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -109,8 +113,12 @@ body {
   border-radius: 300px;
   cursor: pointer;
   transition: 0.3s ease;
-  margin-left: 8px;
 }
+
+.waitlist-text-desktop {
+  display: inline;
+}
+
 .waitlist-text-mobile {
   display: none;
 }
@@ -348,7 +356,7 @@ body {
 /* Responsive Design for Mobile */
 @media (max-width: 932px) {
   .dashboard-container {
-    padding: 20px;
+    padding: 0 5vw;
     font-size: 32px;
     font-variation-settings: 'wght' 550;
   }
@@ -367,13 +375,20 @@ body {
   }
 
   .email-container {
-    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+    gap: 8px;
   }
 
   .email-input {
-    max-width: 267px;
+    max-width: 240px;
     height: 48px;
-    padding-left: 16px;
+    flex-grow: 1;
+  }
+
+  .waitlist-button {
+    width: 90px;
+    height: 48px;
   }
 
   .waitlist-text-desktop {
@@ -382,13 +397,6 @@ body {
 
   .waitlist-text-mobile {
     display: inline;
-  }
-  
-  .waitlist-button {
-    max-width: 78px;
-    margin-left: 0;
-    height: 48px;
-
   }
 
   .error-message{
