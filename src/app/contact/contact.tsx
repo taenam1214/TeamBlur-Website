@@ -69,26 +69,28 @@ const Contact: React.FC = () => {
           Join <span className="blurr-text">Blur<span className="blurred-r">r</span></span>
         </h1>
         <p className="app-update-text">Stay updated on our app launch and exclusive updates</p>
-        <div className="email-container">
-          <input
-            type="email"
-            placeholder="Enter email address"
-            className={`email-input ${!isValidEmail && email ? 'invalid' : ''}`}
-            value={email}
-            onChange={handleEmailChange}
-          />
-          <button
-            className="waitlist-button"
-            disabled={!isValidEmail}
-            onClick={handleJoinWaitlist}
-          >
-            <span className="waitlist-text-desktop">Join waitlist</span>
-            <span className="waitlist-text-mobile">Join</span>
-          </button>
+        <div className = "contact-content">
+          <div className="email-container">
+            <input
+              type="email"
+              placeholder="Enter email address"
+              className={`email-input ${!isValidEmail && email ? 'invalid' : ''}`}
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <button
+              className="waitlist-button"
+              disabled={!isValidEmail}
+              onClick={handleJoinWaitlist}
+            >
+              <span className="waitlist-text-desktop">Join waitlist</span>
+              <span className="waitlist-text-mobile">Join</span>
+            </button>
+          </div>
+          <p className="error-message-contact">
+            {(!isValidEmail && email) ? "Please enter a valid email address." : "\u00A0"}
+          </p>
         </div>
-        {!isValidEmail && email && (
-          <p className="error-message">Please enter a valid email address.</p>
-        )}
       </div>
 
       {/* Modal */}

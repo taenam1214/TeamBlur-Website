@@ -11,9 +11,11 @@
   min-height: 100vh;
   background: transparent;
   box-sizing: border-box;
-  margin-top: 100px;
   z-index: 1;
   overflow: hidden;
+  padding-left: 96px;
+  padding-right: 96px;
+  flex-grow: 1;
 }
 
 /* Scoped Circle Container */
@@ -67,7 +69,7 @@
 
 /* Main content container */
 .content {
-  width: 1248px;
+  width: 100%;
   max-width: 1248px;
   height: 446px;
   border-radius: 32px;
@@ -76,8 +78,16 @@
   background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
   box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 48px;
-  margin-top: 132px; /* Space between content and contact details */
+  margin-top: 132px;
+}
+
+.contact-content{
+  width: 584px;
 }
 
 /* Heading styles */
@@ -205,15 +215,16 @@ h1 {
   display: none;
 }
 
-.error-message {
+.error-message-contact{
   color: white;
   font-size: 14px;
   margin-top: 8px;
   min-height: 20px;
-  text-align: left; 
-  white-space: nowrap; 
-  margin-left: 12px;
+  text-align: left;
+  width: 100%;
+  margin-left: 16px;
 }
+
 
 @media (max-width: 932px) {
 
@@ -223,6 +234,8 @@ h1 {
   height: auto; /* Allow content to determine height */
   min-height: auto; /* Remove forced full viewport height */
   padding-bottom: 0; /* Ensure no extra bottom padding */
+  padding-left: 0;
+  padding-right: 0;
   }
   /* Adjust content size */
   .content {
@@ -330,18 +343,7 @@ h1 {
     margin-bottom: 24px;
   }
 
-    .error-message {
-      color: white;
-      font-size: 12px; 
-      margin-top: 4px;
-      min-height: 16px;
-      text-align: center; 
-      white-space: normal;
-      margin-left: 0;
-      width: 100%;
-      max-width: 320px; 
-      display: block;
-    }
+    
   
 
   

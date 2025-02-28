@@ -142,7 +142,8 @@ body {
   margin-top: 8px;
   min-height: 20px;
   text-align: left;
-  margin-left: 41px;
+  width: 100%;
+  margin-left: 32px;
 }
 
 /* Disabled Button Styling */
@@ -407,6 +408,7 @@ body {
 
   .error-message{
     margin-left: 16px;
+    margin-top: 0;
   }
   .final-content h1,
   .final-content h2 {
