@@ -378,17 +378,20 @@ body {
     width: 100%;
     max-width: 340px;
     gap: 8px;
+    font-size: 14px;
   }
 
   .email-input {
     max-width: 240px;
     height: 48px;
     flex-grow: 1;
+    font-size: 14px;
   }
 
   .waitlist-button {
     width: 90px;
     height: 48px;
+    font-size: 14px;
   }
 
   .waitlist-text-desktop {
