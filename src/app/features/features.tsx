@@ -56,7 +56,7 @@ const Features: React.FC = () => {
 
           {/* Feature 1 - Standard Layout */}
           <div className="feature">
-            <Image src={main} alt="Feature 1" className="feature-image" width={600} height={400} />
+            <Image src={main} alt="Feature 1" className="feature-image" width={490} height={780} />
             <div className="feature-text">
               <h3>Get blurred and mingled!</h3>
               <p>
@@ -68,7 +68,7 @@ const Features: React.FC = () => {
 
           {/* Feature 2 - Reversed Layout */}
           <div className="feature feature-reversed">
-          <Image src={channel} alt="Feature 2" className="feature-image" width={600} height={400} />
+          <Image src={channel} alt="Feature 2" className="feature-image" width={490} height={780} />
             <div className="feature-text">
               <h3>Share similar interests!</h3>
               <p>
