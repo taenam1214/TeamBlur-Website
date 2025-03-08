@@ -28,6 +28,25 @@ const Contact: React.FC = () => {
     ))
   );
 
+  const handleSocialClick = (event: React.MouseEvent<HTMLAnchorElement>, webUrl: string, appUrl: string) => {
+    if (typeof window !== "undefined" && navigator.userAgent) {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+      if (isMobile) {
+        window.location.href = appUrl;
+  
+        // Fallback to web URL if the app is not installed
+        setTimeout(() => {
+          window.location.href = webUrl;
+        }, 1500);
+  
+        // Prevent default anchor click behavior
+        event.preventDefault();
+      }
+    }
+  };
+  
+
   // Email Validation
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -123,16 +142,36 @@ const Contact: React.FC = () => {
             <p>Email: info@blurapp.io</p>
             <p>Phone: (608)-622-0120</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/company/blurapp" target="_blank" rel="noopener noreferrer">
-                <Image src={LinkedInIcon} alt="LinkedIn" width={32} height={32} />
-              </a>
-              <a href="https://www.instagram.com/blurapp.io/" target="_blank" rel="noopener noreferrer">
-                <Image src={InstagramIcon} alt="Instagram" width={32} height={32} />
-              </a>
-              <a href="https://x.com/blurapp_io" target="_blank" rel="noopener noreferrer">
-                <Image src={XIcon} alt="X" width={32} height={32} />
-              </a>
-            </div>
+            {/* LinkedIn */}
+            <a 
+              href="linkedin://company/blurapp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={(e) => handleSocialClick(e, "https://www.linkedin.com/company/blurapp", "linkedin://company/blurapp")}
+            >
+              <Image src={LinkedInIcon} alt="LinkedIn" width={32} height={32} />
+            </a>
+
+            {/* Instagram */}
+            <a 
+              href="instagram://user?username=blurapp.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={(e) => handleSocialClick(e, "https://www.instagram.com/blurapp.io/", "instagram://user?username=blurapp.io")}
+            >
+              <Image src={InstagramIcon} alt="Instagram" width={32} height={32} />
+            </a>
+
+            {/* X (Twitter) */}
+            <a 
+              href="twitter://user?screen_name=blurapp_io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={(e) => handleSocialClick(e, "https://x.com/blurapp_io", "twitter://user?screen_name=blurapp_io")}
+            >
+              <Image src={XIcon} alt="X" width={32} height={32} />
+            </a>
+          </div>
           </div>
         </div>
       </div>
