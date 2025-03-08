@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
             <p>Email: info@blurapp.io</p>
             <p>Phone: (608)-622-0120</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/company/getblurred" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/blurapp" target="_blank" rel="noopener noreferrer">
                 <Image src={LinkedInIcon} alt="LinkedIn" width={32} height={32} />
               </a>
               <a href="https://www.instagram.com/blurapp.io/" target="_blank" rel="noopener noreferrer">
