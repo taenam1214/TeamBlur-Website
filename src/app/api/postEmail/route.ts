@@ -3,7 +3,10 @@ import { NextResponse } from "next/server";
 
 async function getSheetsClient() {
   const auth = new google.auth.GoogleAuth({
-    credentials: process.env.GOOGLE_JSON ? JSON.parse(process.env.GOOGLE_JSON) : undefined,
+    credentials: {
+      client_email: process.env.CLIENT_EMAIL,
+      private_key: process.env.PRIVATE_KEY,
+    },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
@@ -51,3 +54,4 @@ export async function POST(req: Request) {
     );
   }
 }
+
