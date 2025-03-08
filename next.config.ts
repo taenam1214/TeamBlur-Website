@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   },
 
   // Export Configuration for Static Site Deployment
-  output: "export", // Ensures static export for GitHub Pages
+  //output: "export", // Ensures static export for GitHub Pages
   trailingSlash: true, // Ensures proper paths for static export
 
   // Image Optimization (Disabled for GitHub Pages)
