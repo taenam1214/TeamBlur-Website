@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
               <a href="https://www.linkedin.com/company/getblurred" target="_blank" rel="noopener noreferrer">
                 <Image src={LinkedInIcon} alt="LinkedIn" width={32} height={32} />
               </a>
-              <a href="https://www.instagram.com/get.blurred/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/blurapp.io/" target="_blank" rel="noopener noreferrer">
                 <Image src={InstagramIcon} alt="Instagram" width={32} height={32} />
               </a>
               <a href="https://x.com/get_blurred" target="_blank" rel="noopener noreferrer">
