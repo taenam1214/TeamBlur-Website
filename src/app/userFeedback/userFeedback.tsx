@@ -4,11 +4,11 @@ import React, { useRef, useState } from "react";
 import "./userFeedback.css";
 import Image from "next/image";
 
-// Import SVGs
-import wisconsinLogo from "../../assets/wisconsin.svg";
-import washingtonLogo from "../../assets/washington.svg";
-import berkeleyLogo from "../../assets/berkeley.svg";
-import michiganLogo from "../../assets/michigan.svg";
+// Import PNGs
+import wisconsinLogo from "../../assets/wisconsin.png";
+import washingtonLogo from "../../assets/washington.png";
+import berkeleyLogo from "../../assets/berkeley.png";
+import michiganLogo from "../../assets/michigan.png";
 import quoteLogo from "../../assets/quote.svg"; 
 
 const feedbacks = [

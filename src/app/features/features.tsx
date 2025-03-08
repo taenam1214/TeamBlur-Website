@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import "./features.css";
-import madworksLogo from "../../assets/madworks.svg";
-import main from "../../assets/main.svg";
-import channel from "../../assets/channel.svg";
+import madworksLogo from "../../assets/madworks.png";
+import main from "../../assets/main.png";
+import channel from "../../assets/channel.png";
+
 
 const Features: React.FC = () => {
 
@@ -56,7 +57,7 @@ const Features: React.FC = () => {
 
           {/* Feature 1 - Standard Layout */}
           <div className="feature">
-            <Image src={main} alt="Feature 1" className="feature-image" width={490} height={780} />
+            <Image src={main} alt="Feature 1" className="feature-image-main" width={520} height={780} />
             <div className="feature-text">
               <h3>Get blurred and mingled!</h3>
               <p>
@@ -68,7 +69,7 @@ const Features: React.FC = () => {
 
           {/* Feature 2 - Reversed Layout */}
           <div className="feature feature-reversed">
-          <Image src={channel} alt="Feature 2" className="feature-image" width={490} height={780} />
+          <Image src={channel} alt="Feature 2" className="feature-image-channel" width={418} height={780} />
             <div className="feature-text">
               <h3>Share similar interests!</h3>
               <p>

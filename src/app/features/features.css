@@ -145,11 +145,6 @@
     margin-bottom: 320px; 
 
 }
-
-  .feature-image {
-    width: 490px;
-    height: 780px;
-  }
   
   /* Feature Text */
   .feature-text {
@@ -218,7 +213,12 @@
       margin-bottom: 0;
       flex-direction: column;
     }
-    .feature-image{
+    .feature-image-main{
+      height: 600px;
+      width: auto;
+    }
+
+    .feature-image-channel{
       height: 600px;
       width: auto;
     }
