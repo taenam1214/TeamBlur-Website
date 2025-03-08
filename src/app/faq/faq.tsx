@@ -18,7 +18,7 @@ const faqData = [
   },
   {
     question: "When will Blur launch?",
-    answer: "We’re working hard to launch soon! Stay tuned and join the waitlist for updates. Early access is planned for April, with the official launch expected in June. Some users may get access earlier before the full release. 🚀",
+    answer: "We’re working hard to launch soon! Stay tuned and join the waitlist for updates. Early access is planned for May, with the official launch expected in August. Some users may get access earlier before the full release. 🚀",
   },
   {
     question: "What kind of content can I share on Blur?",
