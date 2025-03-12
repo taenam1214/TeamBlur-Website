@@ -138,6 +138,7 @@ h1 {
 .left-section {
   flex: 1; 
   min-width: 300px;
+  padding-left: 96px;
 }
 
 .left-section h2 {
