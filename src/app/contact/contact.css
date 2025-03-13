@@ -293,6 +293,7 @@ h1 {
  .left-section {
     text-align: left;
     width: 100%;
+    padding-left: 0;
   }
 
   .left-section h2 {
