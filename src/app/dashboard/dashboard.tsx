@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import "./dashboard.css";
+import arrowDown from "../../assets/arrow.svg";
+
 
 const Dashboard: React.FC = () => {
   const [step, setStep] = useState(0);
@@ -16,8 +18,8 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setStep(1), 2000),
-      setTimeout(() => setStep(2), 4000),
+      setTimeout(() => setStep(1), 1500),
+      setTimeout(() => setStep(2), 3000),
     ];
 
     return () => timers.forEach(clearTimeout);
@@ -71,6 +73,16 @@ const Dashboard: React.FC = () => {
       >
         Blur<span className="blurred-r">r</span>
       </div>
+      <div
+        className="scroll-indicator"
+        style={{
+          visibility: step >= 2 ? "visible" : "hidden",
+          opacity: step >= 2 ? 1 : 0,
+        }}
+      >
+        <p>Scroll for more</p>
+        <img src={arrowDown} alt="Scroll Down" className="scroll-arrow" />
+      </div>
 
       {colors.map((color, index) => (
         <div
@@ -114,6 +126,10 @@ const Dashboard: React.FC = () => {
         <p className="error-message">
           {(!isValidEmail && email) ? "Please enter a valid email address." : "\u00A0"}
         </p>
+        {/* <div className="scroll-indicator">
+        <p>Scroll for more</p>
+        <img src={arrowDown} alt="Scroll Down" className="scroll-arrow" />
+        </div> */}
       </div>
       
       )}

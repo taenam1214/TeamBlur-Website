@@ -41,7 +41,7 @@ body {
 
 .fade-in-out {
   opacity: 0;
-  animation: fadeInOut 2s ease-in-out;
+  animation: fadeInOut 1.5s ease-in-out;
 }
 
 @keyframes fadeInOut {
@@ -251,6 +251,36 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.scroll-arrow {
+  margin-top: 8px;
+  width: 32px;
+  height: 32px;
+  animation: floatUpDown 2s infinite ease-in-out;
+}
 
 /* Larger Circle Sizes */
 .circle-0 { width: 770px; height: 770px; animation: move1 30s infinite alternate ease-in-out; left: 5vw; top: 5vh; }
@@ -419,6 +449,16 @@ body {
   .final-content h2{
     margin-top: -64px;
     margin-bottom: 56px;
+  }
+
+  .scroll-indicator {
+    font-size: 14px;
+    bottom: 24px;
+  }
+
+  .scroll-arrow {
+    width: 24px;
+    height: 24px;
   }
   
   /* Adjust circles for smaller screens */
