@@ -59,7 +59,7 @@ const Features: React.FC = () => {
           <div className="feature">
             <Image src={main} alt="Feature 1" className="feature-image-main" width={520} height={780} />
             <div className="feature-text">
-              <h3>Get blurred and mingled!</h3>
+              <h3>Join your campus conversations!</h3>
               <p>
                 Share your campus life anonymously and explore other campus students&apos; lives
                 across the states.
