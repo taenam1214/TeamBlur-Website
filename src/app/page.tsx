@@ -12,7 +12,9 @@ export default function HomePage() {
     <>
       <main>
         <section id="dashboard">
-          <Dashboard />
+          <Suspense fallback={<div>Loading Dashboard...</div>}>
+            <Dashboard />
+          </Suspense>
         </section>
 
         <Suspense fallback={<div>Loading Features...</div>}>
