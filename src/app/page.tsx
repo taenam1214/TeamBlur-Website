@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Suspense } from "react";
 import Dashboard from "./dashboard/dashboard";
 import Features from "./features/features";
