@@ -1,53 +1,87 @@
 /* app/privacy/privacy.css */
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #6366f1, #8b5cf6); /* Matches Tailwind from-indigo-500 to-purple-600 */
+  font-family: sans-serif;
+}
+
 .privacy-container {
-  @apply min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-6 py-12 font-sans;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #6366f1, #8b5cf6);
+  color: white;
+  padding: 3rem 1.5rem;
+  font-family: sans-serif;
 }
 
 .privacy-wrapper {
-  @apply max-w-4xl mx-auto space-y-12;
+  max-width: 64rem; /* max-w-4xl */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* space-y-12 */
 }
 
 .privacy-header {
-  @apply flex justify-between items-center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .privacy-heading {
-  @apply text-4xl font-bold;
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;   /* font-bold */
 }
 
 .privacy-card {
-  @apply bg-white bg-opacity-10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  padding: 2rem; /* padding added */
+  margin-top: 2rem; /* spacing */
 }
 
 .privacy-card-content {
-  @apply space-y-10 p-8;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* space-y-10 */
 }
 
 .privacy-section-title {
-  @apply text-2xl font-bold;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
 }
 
 .privacy-list {
-  @apply list-disc list-inside space-y-2;
+  list-style-type: disc;
+  padding-left: 1.25rem; /* list-inside */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
 }
 
 .privacy-text {
-  @apply text-lg;
+  font-size: 1.125rem; /* text-lg */
 }
 
 .privacy-subtext {
-  @apply text-lg font-semibold;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .privacy-button {
-  margin-top: 16px;
-  padding: 12px 24px;
-  font-size: 16px;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   background-color: white;
   color: #7367FF;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -57,16 +91,6 @@
   background-color: #f0f0f0;
 }
 
-.privacy-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 32px;
-  margin-top: 32px;
-}
-
-.privacy-card-content {
-  display: flex;
-  flex-direction: column;
+.underline {
+  text-decoration: underline;
 }
