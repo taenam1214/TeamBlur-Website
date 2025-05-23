@@ -6,6 +6,8 @@ import Image from "next/image";
 import LinkedInIcon from "../../assets/linkedin.svg";
 import InstagramIcon from "../../assets/ig.svg";
 import XIcon from "../../assets/x.svg";
+import Link from "next/link";
+
 
 const Contact: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -182,8 +184,14 @@ const Contact: React.FC = () => {
       {/* Copyright */}
       <div className="copyright-wrapper">
         <div className="copyright-line"></div>
-        <div className="copyright-text">© 2025 Blur, Inc. All Rights Reserved</div>
+        <div className="copyright-text">
+          © 2025 Blur, Inc. All Rights Reserved |{" "}
+          <Link href="/privacy" className="privacy-link">Privacy & Policy</Link> | {" "}
+          <Link href="/terms" className="terms-link">Terms of Service</Link> | {" "}
+          <Link href="/community-guidelines" className="guidelines-link">Community Guidelines</Link>
+        </div>
       </div>
+
     </div>
   );
 };

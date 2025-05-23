@@ -226,6 +226,12 @@ h1 {
   margin-left: 16px;
 }
 
+.privacy-link {
+  text-decoration: underline;
+  color: inherit; /* or a specific color if you want */
+  cursor: pointer;
+}
+
 
 @media (max-width: 932px) {
 

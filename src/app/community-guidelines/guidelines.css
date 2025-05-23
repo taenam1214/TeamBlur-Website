@@ -1,0 +1,72 @@
+/* app/community-guidelines/guidelines.css */
+
+.guidelines-container {
+  @apply min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-6 py-12 font-sans;
+}
+
+.guidelines-wrapper {
+  @apply max-w-4xl mx-auto space-y-12;
+}
+
+.guidelines-header {
+  @apply flex justify-between items-center;
+}
+
+.guidelines-heading {
+  @apply text-4xl font-bold;
+}
+
+.guidelines-card {
+  @apply bg-white bg-opacity-10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20;
+}
+
+.guidelines-card-content {
+  @apply space-y-10 p-8;
+}
+
+.guidelines-section-title {
+  @apply text-2xl font-bold;
+}
+
+.guidelines-list {
+  @apply list-disc list-inside space-y-2;
+}
+
+.guidelines-text {
+  @apply text-lg;
+}
+
+.guidelines-subtext {
+  @apply text-lg font-semibold;
+}
+
+.guidelines-button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: white;
+  color: #7367FF;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.guidelines-button:hover {
+  background-color: #f0f0f0;
+}
+
+.guidelines-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  margin-top: 32px;
+}
+
+.guidelines-card-content {
+  display: flex;
+  flex-direction: column;
+}

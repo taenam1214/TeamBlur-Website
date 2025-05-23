@@ -1,15 +1,35 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import "./dashboard.css";
 import arrowDown from "../../assets/arrow.svg";
 
-
 const Dashboard: React.FC = () => {
+  const searchParams = useSearchParams();
+  const [skipIntro, setSkipIntro] = useState(false);
   const [step, setStep] = useState(0);
   const [email, setEmail] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const fromPrivacyParam = searchParams.get("fromPrivacy");
+    const fromTermsParam = searchParams.get("fromTerms");
+    const fromGuidelinesParam = searchParams.get("fromGuidelines");
+
+
+    if (fromPrivacyParam === "true" || fromTermsParam === "true" || fromGuidelinesParam === "true") {
+      setSkipIntro(true);
+      setStep(2);
+
+      const url = new URL(window.location.href);
+      url.searchParams.delete("fromPrivacy");
+      url.searchParams.delete("fromTerms");
+      url.searchParams.delete("fromGuidelines");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, [searchParams]);
 
   const colors = [
     "#A467FF", "#FFAE94", "#9BE6BE", "#CA89F9", "#EBFFAA",
@@ -17,36 +37,33 @@ const Dashboard: React.FC = () => {
   ];
 
   useEffect(() => {
+    if (skipIntro) return;
     const timers = [
       setTimeout(() => setStep(1), 1500),
       setTimeout(() => setStep(2), 3000),
     ];
 
     return () => timers.forEach(clearTimeout);
-  }, []);
+  }, [skipIntro]);
 
   useEffect(() => {
     if (step < 2) {
-      document.documentElement.style.overflow = "hidden"; // Apply to <html>
-      document.body.style.overflow = "hidden"; // Apply to <body>
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
     } else {
       document.documentElement.style.overflow = "auto";
       document.body.style.overflow = "auto";
     }
   }, [step]);
-  
 
-  // Validate email format
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
     setIsValidEmail(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value));
   };
 
-  // Show modal and reset email after closing
   const handleJoinWaitlist = () => {
     if (isValidEmail) {
-      // Call postEmail api
       (async () => {
         await fetch("/api/postEmail", {
           method: "POST",
@@ -58,7 +75,6 @@ const Dashboard: React.FC = () => {
     }
   };
 
-  // Close modal and reset input
   const handleCloseModal = () => {
     setShowModal(false);
     setEmail("");

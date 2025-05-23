@@ -1,0 +1,72 @@
+/* app/terms/terms.css */
+
+.terms-container {
+  @apply min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-6 py-12 font-sans;
+}
+
+.terms-wrapper {
+  @apply max-w-4xl mx-auto space-y-12;
+}
+
+.terms-header {
+  @apply flex justify-between items-center;
+}
+
+.terms-heading {
+  @apply text-4xl font-bold;
+}
+
+.terms-card {
+  @apply bg-white bg-opacity-10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20;
+}
+
+.terms-card-content {
+  @apply space-y-10 p-8;
+}
+
+.terms-section-title {
+  @apply text-2xl font-bold;
+}
+
+.terms-list {
+  @apply list-disc list-inside space-y-2;
+}
+
+.terms-text {
+  @apply text-lg;
+}
+
+.terms-subtext {
+  @apply text-lg font-semibold;
+}
+
+.terms-button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: white;
+  color: #7367FF;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.terms-button:hover {
+  background-color: #f0f0f0;
+}
+
+.terms-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  margin-top: 32px;
+}
+
+.terms-card-content {
+  display: flex;
+  flex-direction: column;
+}
