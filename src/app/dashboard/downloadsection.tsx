@@ -10,7 +10,7 @@ const DownloadSection: React.FC = () => {
         Be the first <br /> to Join&nbsp;
         <span className="blurr-word">
             <span className="blurr">
-            Blu<span className="blurred-r">r</span>
+            Blur<span className="blurred-r">r</span>
             </span>
         </span>
         </h1>
