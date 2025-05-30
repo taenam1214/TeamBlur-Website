@@ -1,5 +1,5 @@
 import React from "react";
-import "./downloadSection.css";
+import "./downloadsection.css";
 import Image from "next/image";
 
 const DownloadSection: React.FC = () => {
