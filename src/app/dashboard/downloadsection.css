@@ -117,8 +117,6 @@
   word-break: break-word; /* this helps prevent overflow elsewhere */
 }
 
-
-
   @media (max-width: 960px) {
     .download-section {
       flex-direction: column;
