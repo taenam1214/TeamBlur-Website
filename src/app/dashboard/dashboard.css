@@ -58,6 +58,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -40px;
 }
 
 .final-content h1 {
@@ -74,10 +75,10 @@ body {
 
 /* Subtitle */
 .final-content h2 {
-  font-size: 64px;
+  font-size: 32px;
   font-variation-settings: 'wght' 550;
   padding-top: 32px;
-  margin-bottom: 72px;
+  margin-bottom: 20px;
 }
 
 /* Email input and button */
@@ -243,6 +244,56 @@ body {
 
 .modal-button:hover {
   background-color: #5747d6;
+}
+
+.coming-soon-title {
+  font-size: 2rem; 
+  font-weight: 500;
+  color: white;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.scroll-indicator {
+  position: absolute;
+  font-weight: 800;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.scroll-indicator .arrow {
+  font-size: 24px;
+  display: block;
+  margin-top: 6px;
+  animation: bounce 2s infinite;
+}
+
+.get-started-button {
+  margin-top: 40px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.get-started-button:hover {
+  transform: scale(1.05);
+}
+
+.get-started-button img {
+  height: 50px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 /* Fade-in animation */
@@ -442,7 +493,7 @@ body {
   }
   .final-content h1,
   .final-content h2 {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 32px;
   }
 

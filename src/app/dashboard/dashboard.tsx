@@ -4,14 +4,18 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import "./dashboard.css";
 import arrowDown from "../../assets/arrow.svg";
+import Countdown from "../dashboard/countdown";
+import confetti from "canvas-confetti";
+import DownloadSection from "../dashboard/downloadsection";
 
 const Dashboard: React.FC = () => {
   const searchParams = useSearchParams();
   const [skipIntro, setSkipIntro] = useState(false);
   const [step, setStep] = useState(0);
-  const [email, setEmail] = useState("");
-  const [isValidEmail, setIsValidEmail] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  // const [email, setEmail] = useState("");
+  // const [isValidEmail, setIsValidEmail] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  const [showDownload, setShowDownload] = useState(false);
 
   useEffect(() => {
     const fromPrivacyParam = searchParams.get("fromPrivacy");
@@ -36,6 +40,15 @@ const Dashboard: React.FC = () => {
     "#FA75FA", "#FF9A76", "#A4FF76", "#76C7FF", "#FFD976"
   ];
 
+  const handleCountdownComplete = () => {
+    confetti({
+      particleCount: 200,
+      spread: 160,
+      origin: { y: 0.6 },
+    });
+    setShowDownload(true);
+  };
+
   useEffect(() => {
     if (skipIntro) return;
     const timers = [
@@ -56,30 +69,30 @@ const Dashboard: React.FC = () => {
     }
   }, [step]);
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setEmail(value);
-    setIsValidEmail(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value));
-  };
+  // const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const value = e.target.value;
+  //   setEmail(value);
+  //   setIsValidEmail(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value));
+  // };
 
-  const handleJoinWaitlist = () => {
-    if (isValidEmail) {
-      (async () => {
-        await fetch("/api/postEmail", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
-        });
-      })();
-      setShowModal(true);
-    }
-  };
+  // const handleJoinWaitlist = () => {
+  //   if (isValidEmail) {
+  //     (async () => {
+  //       await fetch("/api/postEmail", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({ email }),
+  //       });
+  //     })();
+  //     setShowModal(true);
+  //   }
+  // };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setEmail("");
-    setIsValidEmail(false);
-  };
+  // const handleCloseModal = () => {
+  //   setShowModal(false);
+  //   setEmail("");
+  //   setIsValidEmail(false);
+  // };
 
   return (
     <section className="dashboard-container">
@@ -115,42 +128,21 @@ const Dashboard: React.FC = () => {
           <span className="blurr-text-1"> Blur<span className="blurred-r">r</span></span>
         </h1>
       )}
-      {step === 2 && (
+      {step === 2 && !showDownload && (
         <div className="final-content">
-        <h1>
-          Get Ready to <span className="blurr-text-1"> Blur<span className="blurred-r">r</span></span>
-        </h1>
-        <h2>Join the Waitlist</h2>
-        <div className="email-container">
-          <input
-            type="email"
-            placeholder="Enter email address"
-            className={`email-input ${!isValidEmail && email ? 'invalid' : ''}`}
-            value={email}
-            onChange={handleEmailChange}
-          />
-          <button
-            className="waitlist-button"
-            disabled={!isValidEmail}
-            onClick={handleJoinWaitlist}
-          >
-            <span className="waitlist-text-desktop">Join waitlist</span>
-            <span className="waitlist-text-mobile">Join</span>
-          </button>
+          {/* <h2 className="coming-soon-title">We are coming soon</h2> */}
+          <Countdown onComplete={handleCountdownComplete} />
+          {/* {!isValidEmail && email && (
+            <p className="error-message">Please enter a valid email address.</p>
+          )} */}
+          <div className="scroll-indicator">
+            <p>Scroll for more</p>
+            <span className="arrow">↓</span>
+          </div>
         </div>
-        {/* Always render the error message element */}
-        <p className="error-message">
-          {(!isValidEmail && email) ? "Please enter a valid email address." : "\u00A0"}
-        </p>
-        {/* <div className="scroll-indicator">
-        <p>Scroll for more</p>
-        <img src={arrowDown} alt="Scroll Down" className="scroll-arrow" />
-        </div> */}
-      </div>
-      
       )}
-
-      {showModal && (
+      {showDownload && <DownloadSection />}
+      {/* {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
             <h1 className="modal-title">You&#39;re on the list! 🎉</h1>
@@ -163,7 +155,7 @@ const Dashboard: React.FC = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 };

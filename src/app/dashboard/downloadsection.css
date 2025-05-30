@@ -1,0 +1,146 @@
+/* downloadSection.css */
+
+.download-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 300px 200px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .download-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+  }
+
+  .app-store-button {
+    display: inline-block;
+    background-color: #212427;
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-top: -50px;
+  }
+
+  .app-store-button:hover {
+    transform: scale(1.05);
+    background-color: #3E4247;
+  }
+
+
+  .app-store-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .apple-icon {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .store-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    color: white;
+  }
+
+  .store-text .small {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .store-text .big {
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+
+  .download-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(40px); 
+  }
+
+  .phone-image {
+    width: 120%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    transform: scale(1.3);
+    transform-origin: center right;
+
+  }
+
+  .blurr-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.blurr {
+  font-family: "DynaPuff", cursive;
+  color: white;
+  display: inline;
+}
+
+.blurred-r {
+  display: inline;
+  filter: blur(4px);
+  margin: 0;
+  padding: 0;
+}
+
+.blurr, .blurred-r {
+  white-space: nowrap;
+}
+
+.download-heading {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  display: inline-block;
+  max-width: 100%;
+  word-break: break-word; /* this helps prevent overflow elsewhere */
+}
+
+
+
+  @media (max-width: 960px) {
+    .download-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .download-left,
+    .download-right {
+      width: 100%;
+    }
+
+    .download-heading {
+      font-size: 42px;
+    }
+
+    .app-store-logo {
+      justify-content: center;
+    }
+
+    .phone-image {
+      margin-top: 40px;
+      width: 100%;
+    }
+}
