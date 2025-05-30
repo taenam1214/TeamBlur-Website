@@ -6,7 +6,7 @@ type CountdownProps = {
 };
 
 const Countdown: React.FC<CountdownProps> = ({ onComplete }) => {
-  const target = new Date("2025-05-29T16:00:00-05:00"); // 4:00 PM CDT (UTC-5)
+  const target = new Date("2025-05-31T16:00:00-05:00"); // 4:00 PM CDT (UTC-5)
 
   const calculateTimeLeft = () => {
     const now = new Date();
