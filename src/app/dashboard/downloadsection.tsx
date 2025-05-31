@@ -15,7 +15,8 @@ const DownloadSection: React.FC = () => {
         </span>
         </h1>
         <a
-          href="https://apps.apple.com/us/app/apple-store/id375380948"
+          href="https://apps.apple.com/us/app/blur-college-campus-community/id6746390026"
+          
           target="_blank"
           rel="noopener noreferrer"
           className="app-store-button"
